@@ -4,8 +4,8 @@
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-    height: 100vh;
     align-items: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
@@ -15,6 +15,7 @@
     margin-bottom: 20px;
     border-radius: 10px;
     box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.297);
 }
 
 .book-cont {
@@ -28,8 +29,19 @@
     border: 2px;
     width: calc(100%/4 - 20px);
     align-items: center;
-    height: 80%;
+    height: 80vh;
     background-color: rgba(255, 255, 255, 0.594);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.book-cont:hover {
+    /* -webkit-transform: scale(2);
+    transform: scale(1.05);
+    transition: 0.8s; */
+    border: 2px solid;
+    border-color: rgba(0, 0, 0, 0.297);
+    background-color: rgba(209, 196, 196, 0.594);
 }
 
 .title {
@@ -57,8 +69,9 @@
 .authors {
     text-align: center;
     font-size: 14px;
-    color: black;
-    margin-bottom: 20px;
+    font-weight: 600;
+    color: rgb(175, 160, 160);
+    margin-bottom: 5px;
     font-family: 'Work Sans', sans-serif;
     line-height: 1.5;
     display: inline;
@@ -98,6 +111,7 @@
 
 .button:hover {
     color: orange;
+    cursor: pointer;
 }
 
 .add {
@@ -112,4 +126,72 @@
     background: rgba(186, 101, 5, 0.374);
     border-radius: 13px;
     padding: 3px 10px;
+}
+
+.header {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(186 101 5 / 37%);
+}
+
+.add-modal-content {
+    padding: 20px 40px 20px 40px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    flex-direction: column;
+    border: 2px solid rgba(158, 141, 119, 0.548);
+    background-color: rgba(255, 255, 255, 0.137);
+    border-radius: 20px;
+    display: flex;
+}
+
+.input {
+    background-color: antiquewhite;
+    border: 1px solid rgba(0, 0, 0, 0.39);
+    margin: 0px 10px;
+    padding: 5px;
+    border-radius: 20px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.buttonConfirm {
+    width: 10%;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 40px;
+}
+
+.add-modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.801);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.inner_form {
+    padding-bottom: 20px;
+}
+
+.buttonMain {
+    color: rgb(243, 194, 81);
+    margin: 10px 0 0 0;
+    width: fit-content;
+}
+
+.main {
+    color: rgba(0, 0, 0, 0.509);
+}
+
+.forButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
